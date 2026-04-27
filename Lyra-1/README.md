@@ -34,7 +34,7 @@ The ability to generate virtual environments is crucial for applications ranging
 
 Please follow the [INSTALL.md](INSTALL.md) to set up your conda environment and download pre-trained weights.
 
-> **Personal note:** I had to use Python 3.10 (not 3.11+) to avoid a compatibility issue with the custom CUDA extensions during the conda setup step. If you run into build errors, try downgrading Python first.
-
-## Demo
-Lyra supports both images and videos as input. Below are examples of running Lyra on sing
+> **Personal note:** I had to use Python 3.10 (not 3.11+) to avoid a compatibility issue with the
+> `diff-gaussian-rasterization` package. Also, make sure your CUDA toolkit version matches your
+> PyTorch build (I used CUDA 11.8 with `torch==2.0.1+cu118`) — mismatches caused silent failures
+> during the 3DGS decoder compilation step.
